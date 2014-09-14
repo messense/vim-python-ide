@@ -43,3 +43,9 @@
 [submodule ".vim/bundle/vim-json"]
 	path = .vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule ".vim/bundle/vimproc.vim"]
+	path = .vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule ".vim/bundle/vimshell.vim"]
+	path = .vim/bundle/vimshell.vim
+	url = https://github.com/Shougo/vimshell.vim.git

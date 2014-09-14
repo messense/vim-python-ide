@@ -331,3 +331,7 @@ let g:jedi#use_splits_not_buffers = "left"
 
 " sytastic settings
 let g:syntastic_python_checkers = ['flake8']
+
+" vim-shell settings
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_popup_command = 'vsplit'
