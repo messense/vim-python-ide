@@ -1,5 +1,6 @@
 " Pathogen load
-execute pathogen#infect()
+call pathogen#infect()
+call pathogen#helptags()
 
 " 语法高亮
 syntax on
