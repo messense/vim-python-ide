@@ -220,8 +220,8 @@ noremap <silent><leader>/ :nohls<CR>
 " --------tab/buffer相关
 
 "Use arrow key to change buffer"
-noremap <left> :bp<CR>
-noremap <right> :bn<CR>
+" noremap <left> :bp<CR>
+" noremap <right> :bn<CR>
 
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
@@ -271,10 +271,10 @@ function! AutoSetFileHead()
     endif
 
     "如果文件类型为python
-    if &filetype == 'python'
-        call setline(1, "\#!/usr/bin/env python")
-        call append(1, "\# encoding: utf-8")
-    endif
+    " if &filetype == 'python'
+    "     call setline(1, "\#!/usr/bin/env python")
+    "     call append(1, "\# encoding: utf-8")
+    " endif
 
     normal G
     normal o
@@ -304,10 +304,10 @@ endif
 
 " theme主题
 set background=dark
-"colorscheme solarized
 set t_Co=256
 
 colorscheme molokai
+"colorscheme solarized
 "colorscheme desert
 
 "设置标记一列的背景颜色和数字一行颜色一致
