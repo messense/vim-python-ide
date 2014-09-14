@@ -2,6 +2,8 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+set nocompatible
+
 " 语法高亮
 syntax on
 
@@ -28,8 +30,13 @@ set cursorcolumn
 set cursorline          " 突出显示当前行
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
-""好处：误删什么的，如果以前屏幕打开，可以找回
+"好处：误删什么的，如果以前屏幕打开，可以找回
 set t_ti= t_te=
+
+"使用鼠标
+if has('mouse')
+    set mouse=a
+endif
 
 " 去掉输入错误的提示声音
 set title                " change the terminal's title
