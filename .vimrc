@@ -311,6 +311,7 @@ highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
 " jedi-vim settings
+let g:jedi#completions_command = "<C-N>"
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#use_splits_not_buffers = "left"
 
@@ -323,3 +324,11 @@ let g:vimshell_popup_command = 'vsplit'
 
 " NERDTree settings
 map <F7> :NERDTreeToggle<CR>
+
+" python-mode settings
+let g:pymode_run = 0
+let g:pymode_breakpoint = 0
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_unmodified = 0
+let g:pymode_rope_completion = 0
+map <F9> :PymodeLint<CR>
