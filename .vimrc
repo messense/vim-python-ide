@@ -185,7 +185,7 @@ set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
 
 " disbale paste mode when leaving insert mode
 au InsertLeave * set nopaste
-nnoremap <F6> :call HideNumber()<CR>
+" nnoremap <F6> :call HideNumber()<CR>
 
 "Smart way to move between windows 分屏窗口移动
 map <C-j> <C-W>j
@@ -255,7 +255,7 @@ nmap t o<ESC>k
 nmap T O<ESC>j
 
 " Python 文件的一般设置，比如不要 tab 等
-autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai nosmartindent
+autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai nosmartindent wrap
 
 " 保存python文件时删除多余空格
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
@@ -267,7 +267,7 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 
 " F10 to run python script
-nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
+" nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -332,3 +332,4 @@ let g:pymode_lint_on_write = 0
 let g:pymode_lint_unmodified = 0
 let g:pymode_rope_completion = 0
 map <F9> :PymodeLint<CR>
+map <F10> :PymodeLintAuto<CR>
