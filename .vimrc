@@ -101,7 +101,7 @@ set foldlevel=99
 
 " 缩进配置
 
-set smartindent   " Smart indent
+"set smartindent   " Smart indent
 set autoindent    " 打开自动缩进
 " never add copyindent, case error   " copy the previous indentation on autoindenting
 
