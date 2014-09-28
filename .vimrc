@@ -311,6 +311,7 @@ highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
 " jedi-vim settings
+let g:jedi#completions_enabled = 0
 let g:jedi#completions_command = "<C-N>"
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#use_splits_not_buffers = "left"
@@ -333,3 +334,6 @@ let g:pymode_lint_unmodified = 0
 let g:pymode_rope_completion = 0
 map <F9> :PymodeLint<CR>
 map <F10> :PymodeLintAuto<CR>
+
+" YouCompleteMe settings
+let g:ycm_key_invoke_completion = "<C-N>"
