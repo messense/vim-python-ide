@@ -15,6 +15,10 @@ git submodule init && git submodule update
 cd .vim/bundle/vimproc.vim && make
 # get jedi
 cd .vim/bundle/jedi-vim && git submodule update --init
+# install YouCompleteMe
+cd .vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+./install.sh
 ```
 
 Softlink `.vim` and `.vimrc` to your HOME directory:
