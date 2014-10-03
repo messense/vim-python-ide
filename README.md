@@ -13,9 +13,6 @@ cd ~/.vim-python-ide
 git submodule update --init --recursive
 # build vimproc
 cd .vim/bundle/vimproc.vim && make
-# install YouCompleteMe
-cd .vim/bundle/YouCompleteMe
-./install.sh
 ```
 
 Softlink `.vim` and `.vimrc` to your HOME directory:
