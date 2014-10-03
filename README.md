@@ -1,7 +1,7 @@
 vim-python-ide
 ==============
 
-Personal Vim configuration files for developing Python projects on OS X
+Personal Vim configuration files for developing Python projects on OS X and Linux
 
 ## How to install
 
