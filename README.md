@@ -10,14 +10,11 @@ Clone the repo to your local disk first:
 ```bash
 git clone https://github.com/messense/vim-python-ide.git ~/.vim-python-ide
 cd ~/.vim-python-ide
-git submodule init && git submodule update
+git submodule update --init --recursive
 # build vimproc
 cd .vim/bundle/vimproc.vim && make
-# get jedi
-cd .vim/bundle/jedi-vim && git submodule update --init
 # install YouCompleteMe
 cd .vim/bundle/YouCompleteMe
-git submodule update --init --recursive
 ./install.sh
 ```
 
