@@ -29,7 +29,7 @@ You may need to install some Python package to make all this work:
 
     [sudo] pip install -U jedi flake8 pyflakes
 
-Bonus - screenrc
+## Bonus - screenrc
 
 There is also a screen configuration file `.screenrc` in this project. Using it by:
 
@@ -37,7 +37,7 @@ There is also a screen configuration file `.screenrc` in this project. Using it 
 ln -s ~/.vim-python-ide/.screenrc ~/.screenrc
 ```
 
-Key mappings:
+### Key mappings:
 
 * shortcut prefix: C-\
 * F2 new screen
