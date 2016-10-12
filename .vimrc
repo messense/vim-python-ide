@@ -323,6 +323,8 @@ highlight SpellLocal term=underline cterm=underline
 "let g:jedi#use_tabs_not_buffers = 0
 "let g:jedi#use_splits_not_buffers = "left"
 
+let python_highlight_all = 1
+
 " sytastic settings
 let g:syntastic_python_checkers = ['flake8']
 
