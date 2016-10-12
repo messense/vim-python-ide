@@ -28,6 +28,10 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 " 突出显示当前行等
 set cursorcolumn
 set cursorline          " 突出显示当前行
+set colorcolumn=120
+
+" 启用 true color
+set termguicolors
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
 "好处：误删什么的，如果以前屏幕打开，可以找回
@@ -267,6 +271,7 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.js :call DeleteTrailingWS()
 
 " F10 to run python script
 " nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
@@ -312,23 +317,11 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
-" Add the virtualenv's site-packages to vim path
-if has('python')
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, os.path.join(project_base_dir, 'lib', 'python%d.%d' % sys.version_info[:2], 'site-packages'))
-EOF
-endif
-
 " jedi-vim settings
-let g:jedi#completions_enabled = 1
-let g:jedi#completions_command = "<C-N>"
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#use_splits_not_buffers = "left"
+"let g:jedi#completions_enabled = 1
+"let g:jedi#completions_command = "<C-N>"
+"let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#use_splits_not_buffers = "left"
 
 " sytastic settings
 let g:syntastic_python_checkers = ['flake8']
@@ -339,15 +332,6 @@ let g:vimshell_popup_command = 'vsplit'
 
 " NERDTree settings
 map <F7> :NERDTreeToggle<CR>
-
-" python-mode settings
-let g:pymode_run = 0
-let g:pymode_breakpoint = 0
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_unmodified = 0
-let g:pymode_rope_completion = 0
-map <F9> :PymodeLint<CR>
-map <F10> :PymodeLintAuto<CR>
 
 " vim-multiple-cursors settings
 let g:multi_cursor_use_default_mapping=0
@@ -387,14 +371,19 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " YouCompleteMe settings
-"let g:ycm_key_list_select_completion = ['<Down>']
-"let g:ycm_key_list_previous_completion = ['<Up>']
-"let g:ycm_complete_in_comments = 1
-"let g:ycm_complete_in_strings = 1
-"let g:ycm_seed_identifiers_with_syntax=1
-"let g:ycm_collect_identifiers_from_comments_and_strings = 1
-"let g:ycm_collect_identifiers_from_tags_files = 1
-"let g:ycm_goto_buffer_command = 'horizontal-split'
+let g:ycm_auto_trigger = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_goto_buffer_command = 'vertical-split'
+"let g:ycm_rust_src_path = '/usr/local/share/src/rust/nightly/src'
+let g:ycm_add_preview_to_completeopt = 1
 
-"noremap <leader>jd :YcmCompleter GoToDefinition<CR>
-"noremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+noremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
+noremap <leader>g :YcmCompleter GoToDeclaration<CR>
+
+if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
+    let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+endif
