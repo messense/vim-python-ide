@@ -11,8 +11,6 @@ Clone the repo to your local disk first:
 git clone https://github.com/messense/vim-python-ide.git ~/.vim-python-ide
 cd ~/.vim-python-ide
 git submodule update --init --recursive
-# build vimproc
-cd .vim/bundle/vimproc.vim && make
 ```
 
 Go to `.vim/bundle/YouCompleteMe` and install it by following its official [README](https://github.com/Valloric/YouCompleteMe)
