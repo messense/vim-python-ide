@@ -15,6 +15,8 @@ git submodule update --init --recursive
 cd .vim/bundle/vimproc.vim && make
 ```
 
+Go to `.vim/bundle/YouCompleteMe` and install it by following its official [README](https://github.com/Valloric/YouCompleteMe)
+
 Softlink `.vim` and `.vimrc` to your HOME directory:
 
 ```bash
@@ -24,7 +26,7 @@ ln -s ~/.vim-python-ide/.vimrc ~/.vimrc
 
 You may need to install some Python package to make all this work:
 
-    [sudo] pip install -U jedi flake8 pyflakes
+    [sudo] pip install -U flake8 pyflakes
 
 ## Bonus - screenrc
 
