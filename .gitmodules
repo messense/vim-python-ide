@@ -22,21 +22,12 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
-[submodule ".vim/bundle/vim-less"]
-	path = .vim/bundle/vim-less
-	url = https://github.com/groenewege/vim-less.git
 [submodule ".vim/bundle/vim-json"]
 	path = .vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
-[submodule ".vim/bundle/vimshell.vim"]
-	path = .vim/bundle/vimshell.vim
-	url = https://github.com/Shougo/vimshell.vim.git
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
@@ -58,15 +49,6 @@
 [submodule ".vim/bundle/Vim-Jinja2-Syntax"]
 	path = .vim/bundle/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
-[submodule ".vim/bundle/nginx-vim-syntax"]
-	path = .vim/bundle/nginx-vim-syntax
-	url = https://github.com/evanmiller/nginx-vim-syntax.git
-[submodule ".vim/bundle/emmet-vim"]
-	path = .vim/bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
-[submodule ".vim/bundle/jquery.vim"]
-	path = .vim/bundle/jquery.vim
-	url = https://github.com/nono/jquery.vim.git
 [submodule ".vim/bundle/rust.vim"]
 	path = .vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
@@ -79,15 +61,6 @@
 [submodule ".vim/bundle/vim-toml"]
 	path = .vim/bundle/vim-toml
 	url = https://github.com/cespare/vim-toml.git
-[submodule ".vim/bundle/vim-vue"]
-	path = .vim/bundle/vim-vue
-	url = https://github.com/posva/vim-vue.git
-[submodule ".vim/bundle/es.next.syntax.vim"]
-	path = .vim/bundle/es.next.syntax.vim
-	url = https://github.com/othree/es.next.syntax.vim.git
-[submodule ".vim/bundle/javascript-libraries-syntax.vim"]
-	path = .vim/bundle/javascript-libraries-syntax.vim
-	url = https://github.com/othree/javascript-libraries-syntax.vim.git
 [submodule ".vim/bundle/salt-vim"]
 	path = .vim/bundle/salt-vim
 	url = https://github.com/saltstack/salt-vim.git
@@ -100,6 +73,3 @@
 [submodule ".vim/bundle/vim-raml"]
 	path = .vim/bundle/vim-raml
 	url = https://github.com/IN3D/vim-raml.git
-[submodule ".vim/bundle/ale"]
-	path = .vim/bundle/ale
-	url = https://github.com/w0rp/ale.git
